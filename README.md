@@ -1,2 +1,2 @@
 # common-scripts
-This repo contains fcommon scripts required for deploying roboshop app!!
+This repo contains common scripts required for deploying roboshop app!!
