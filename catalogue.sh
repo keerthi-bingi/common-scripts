@@ -1,13 +1,12 @@
 #!/bin/bash
 
 source ./common.sh
+app_name=catalogue
 
-APP_NAME="catalogue"
-
-CHECK_ROOT_USER
-NODE_JS_SETUP
-APP_SETUP
-SYSTEMD_SETUP
+check_root
+app_setup
+nodejs_setup
+systemd_setup
 
 # Loading data into MongoDB
 cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongo.repo
@@ -21,6 +20,3 @@ if [ $INDEX -le 0 ]; then
 else
     echo -e "$(date "+%Y-%m-%d %H:%M:%S") | Products already loaded ... $Y SKIPPING $N"
 fi
-
-APP_RESTART
-PRINT_TOTAL_TIME
