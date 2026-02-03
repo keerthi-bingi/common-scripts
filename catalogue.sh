@@ -1,7 +1,8 @@
 #!/bin/bash
-APP_NAME="catalogue"
 
 source ./common.sh
+
+APP_NAME="catalogue"
 
 CHECK_ROOT_USER
 NODE_JS_SETUP
